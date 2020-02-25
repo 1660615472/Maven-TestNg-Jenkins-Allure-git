@@ -125,11 +125,15 @@ public class KeywordOfWeb {
      *
      * @param waitTime
      */
-    public void sleep(String waitTime) throws Exception {
+    public void sleep(String waitTime)  {
         int time = 0;
         time = Integer.parseInt ( waitTime );
         //毫秒乘以1000为秒
+        try {
         Thread.sleep ( time * 1000 );
+        }catch(Exception e) {
+        	e.printStackTrace();
+        }
     }
 
 
